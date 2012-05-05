@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Testing</title>
+    <script src="Scripts/jquery-1.7.2.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui-1.8.19.js" type="text/javascript"></script>
+    <script src="Scripts/knockout.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#javascriptTester").hide();
+
+            $.ajaxSetup({ cache: false });
+
+            var my = my || {};
+
+            my.vm = (function () {
+                var self = this;
+
+                var _allConseillers = ko.observableArray([]);
+                var _allDistricts = ko.observableArray([]);
+                var _allFonctions = ko.observableArray([]);
+                var _allMandats = ko.observableArray([]);
+
+                var _init = function () {
+
+                    $.getJSON("data/conseillers.json", function (data) {
+                        my.vm.allConseillers(data);
+                    });
+
+                    $.getJSON("data/districts.json", function (data) {
+                        my.vm.allDistricts(data);
+                    }).error(function () {
+                        console.log(arguments);
+                    });
+
+                    $.getJSON("data/fonctions.json", function (data) {
+                        my.vm.allFonctions(data);
+                    });
+
+                    $.getJSON("data/mandats.json", function (data) {
+                        my.vm.allMandats(data);
+                    });
+
+
+                }
+
+                return {
+                    ping: "pong",
+                    init: _init,
+                    allConseillers: _allConseillers,
+                    allDistricts: _allDistricts,
+                    allFonctions: _allFonctions,
+                    allMandats: _allMandats
+                }
+            })();
+
+            my.vm.init();
+
+            ko.applyBindings(my.vm);
+        })
+    </script>
+</head>
+<body>
+    <p id="javascriptTester">Javascript is required to run this site.</p>
+    <p>ping: [<span data-bind="text:ping"></span>]</p>
+
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+    new TWTR.Widget({
+        version: 2,
+        type: 'search',
+        search: ' @SPsenak OR @AlainRiel OR @tremblaymaxim OR @DTasse OR @angersluc',
+        interval: 30000,
+        title: 'Mon Conseiller',
+        subject: 'Gatineau Ouverte',
+        width: 250,
+        height: 300,
+        theme: {
+            shell: {
+                background: '#8ec1da',
+                color: '#ffffff'
+            },
+            tweets: {
+                background: '#ffffff',
+                color: '#444444',
+                links: '#1985b5'
+            }
+        },
+        features: {
+            scrollbar: false,
+            loop: false,
+            live: true,
+            behavior: 'all'
+        }
+    }).render().start();
+</script>
+    
+<h1>District</h1>
+<table>
+    <tbody data-bind="foreach:allDistricts">
+        <tr>
+            <td><span data-bind="text:district_id"></span></td>
+            <td><span data-bind="text:name"></span></td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Conseiller</h1>
+<table>
+    <tbody data-bind="foreach:allConseillers">
+        <tr>
+            <td><span data-bind="text:conseiller_id"></span></td>
+            <td><span data-bind="text:conseiller_id"></span></td>
+		    <td><span data-bind="text:district_id"></span></td>
+            <td><span data-bind="text:first_name"></span></td>
+            <td><span data-bind="text:last_name"></span></td>
+            <td><span data-bind="text:email"></span></td>
+            <td><span data-bind="text:phone"></span></td>
+            <td><span data-bind="text:web"></span></td>
+            <td><span data-bind="text:twitter"></span></td>
+            <td><span data-bind="text:facebook"></span></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h1>Fonction</h1>
+<table>
+    <tbody data-bind="foreach:allFonctions">
+        <tr>
+            <td><span data-bind="text:conseiller_id"></span></td>
+            <td><span data-bind="text:fonction"></span></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h1>Mandat</h1>
+<table>
+    <tbody data-bind="foreach:allMandats">
+        <tr>
+            <td><span data-bind="text:conseiller_id"></span></td>
+            <td><span data-bind="text:fonction"></span></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+</body>
+</html>
