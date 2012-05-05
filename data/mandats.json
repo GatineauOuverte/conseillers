@@ -45,11 +45,11 @@
     },
     {
         "conseiller_id": 2,
-        "fonction": "Réduire la vitesse sur les artères principales ainsi que dans les zones résconseiller_identielles"
+        "fonction": "Réduire la vitesse sur les artères principales ainsi que dans les zones résidentielles"
     },
     {
         "conseiller_id": 2,
-        "fonction": "Augmenter la surveillance dans les parcs afin de minimiser l'impact sur les résconseiller_idences avoisinantes"
+        "fonction": "Augmenter la surveillance dans les parcs afin de minimiser l'impact sur les résidences avoisinantes"
     },
     {
         "conseiller_id": 2,
@@ -89,7 +89,7 @@
     },
     {
         "conseiller_id": 3,
-        "fonction": "Préserver l'conseiller_identité spécifique"
+        "fonction": "Préserver l'identité spécifique"
     },
     {
         "conseiller_id": 4,
@@ -209,7 +209,7 @@
     },
     {
         "conseiller_id": 6,
-        "fonction": "Soutenir des initiatives qui visent à améliorer la qualité de vie des résconseiller_idants du district de l'Orée-du-Parc, notamment en matière de transport,de routes, de sécurité, de disponibilité des équipements récréatifs et sportifs et d'environnement."
+        "fonction": "Soutenir des initiatives qui visent à améliorer la qualité de vie des résidants du district de l'Orée-du-Parc, notamment en matière de transport,de routes, de sécurité, de disponibilité des équipements récréatifs et sportifs et d'environnement."
     },
     {
         "conseiller_id": 6,
@@ -217,7 +217,7 @@
     },
     {
         "conseiller_id": 6,
-        "fonction": "Contribuer à ce que les résconseiller_idants du district de l'Orée-du-Parc, tout comme ceux de l'ensemble de la ville de Gatineau, soient fiers d'être Gatinois à travers les initiatives dont la réalisation renforcera le sentiment d'appartenance et la fierté d'être Gatinois."
+        "fonction": "Contribuer à ce que les résidants du district de l'Orée-du-Parc, tout comme ceux de l'ensemble de la ville de Gatineau, soient fiers d'être Gatinois à travers les initiatives dont la réalisation renforcera le sentiment d'appartenance et la fierté d'être Gatinois."
     },
     {
         "conseiller_id": 7,
@@ -253,7 +253,7 @@
     },
     {
         "conseiller_id": 8,
-        "fonction": "Mettre en œuvre la proposition de l'Association des résconseiller_idants des jardins Taché pour assurer la sécurité des piétons sur le boulevard Alexandre-Taché"
+        "fonction": "Mettre en œuvre la proposition de l'Association des résidants des jardins Taché pour assurer la sécurité des piétons sur le boulevard Alexandre-Taché"
     },
     {
         "conseiller_id": 8,
@@ -285,7 +285,7 @@
     },
     {
         "conseiller_id": 8,
-        "fonction": "Rendre le prêt de livres de bibliothèque accessible aux résconseiller_idences pour aînés"
+        "fonction": "Rendre le prêt de livres de bibliothèque accessible aux résidences pour aînés"
     },
     {
         "conseiller_id": 9,
@@ -341,11 +341,11 @@
     },
     {
         "conseiller_id": 11,
-        "fonction": "Continuer à communiquer rapconseiller_idement avec les citoyens"
+        "fonction": "Continuer à communiquer rapidement avec les citoyens"
     },
     {
         "conseiller_id": 11,
-        "fonction": "Assurer la réfection plus rapconseiller_ide et efficace des rues du quartier"
+        "fonction": "Assurer la réfection plus rapide et efficace des rues du quartier"
     },
     {
         "conseiller_id": 11,
@@ -469,11 +469,11 @@
     },
     {
         "conseiller_id": 14,
-        "fonction": "Aconseiller_ider à structurer des comités d'embellissement et de bienvenue"
+        "fonction": "Aider à structurer des comités d'embellissement et de bienvenue"
     },
     {
         "conseiller_id": 14,
-        "fonction": "Incitatif pour les associations d'entraconseiller_ide à s'installer dans le district"
+        "fonction": "Incitatif pour les associations d'entraide à s'installer dans le district"
     },
     {
         "conseiller_id": 14,
@@ -557,7 +557,7 @@
     },
     {
         "conseiller_id": 16,
-        "fonction": "Construction du parc du Faubourg de la Blanche et du parc du projet résconseiller_identiel du boulevard Lorrain"
+        "fonction": "Construction du parc du Faubourg de la Blanche et du parc du projet résidentiel du boulevard Lorrain"
     },
     {
         "conseiller_id": 16,
@@ -585,7 +585,7 @@
     },
     {
         "conseiller_id": 17,
-        "fonction": "Préparer l'avenir des jeunes par nos actions et les aconseiller_ider à le préparer"
+        "fonction": "Préparer l'avenir des jeunes par nos actions et les aider à le préparer"
     },
     {
         "conseiller_id": 17,
