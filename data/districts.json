@@ -1,74 +1,74 @@
 [
     {
-        "id": 1,
+        "district_id": 1,
         "name": "District d'Aylmer"
     },
     {
-        "id": 2,
+        "district_id": 2,
         "name": "District de Lucerne"
     },
     {
-        "id": 3,
+        "district_id": 3,
         "name": "District de Deschênes"
     },
     {
-        "id": 4,
+        "district_id": 4,
         "name": "District du Plateau-Manoir-des-Trembles"
     },
     {
-        "id": 5,
+        "district_id": 5,
         "name": "District de Wright-Parc-de-la-Montagne"
     },
     {
-        "id": 6,
+        "district_id": 6,
         "name": "District de l'Orée-du-Parc"
     },
     {
-        "id": 7,
+        "district_id": 7,
         "name": "District de Saint-Raymond-Vanier"
     },
     {
-        "id": 8,
+        "district_id": 8,
         "name": "District de Hull-Val-Tétreau"
     },
     {
-        "id": 9,
+        "district_id": 9,
         "name": "District de Limbour"
     },
     {
-        "id": 10,
+        "district_id": 10,
         "name": "District de Touraine"
     },
     {
-        "id": 11,
+        "district_id": 11,
         "name": "District de Pointe-Gatineau"
     },
     {
-        "id": 12,
+        "district_id": 12,
         "name": "District du Carrefour-de-l'Hôpital"
     },
     {
-        "id": 13,
+        "district_id": 13,
         "name": "District du Versant"
     },
     {
-        "id": 14,
+        "district_id": 14,
         "name": "District de Bellevue"
     },
     {
-        "id": 15,
+        "district_id": 15,
         "name": "District du Lac-Beauchamp"
     },
     {
-        "id": 16,
+        "district_id": 16,
         "name": "District de la Rivière-Blanche"
     },
     {
-        "id": 17,
+        "district_id": 17,
         "name": "District de Masson-Angers"
     },
     {
-        "id": 18,
+        "district_id": 18,
         "name": "District de Buckingham"
     },
 ]
