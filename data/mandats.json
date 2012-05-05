@@ -1,0 +1,658 @@
+[
+    {
+        "id": 1,
+        "fonction": "Création d'un conseil de district"
+    },
+    {
+        "id": 1,
+        "fonction": "Mise en valeur de la rue Principale et du Vieux-Aylmer"
+    },
+    {
+        "id": 1,
+        "fonction": "Revitalisation des parcs municipaux et du port de plaisance"
+    },
+    {
+        "id": 1,
+        "fonction": "Soutien aux organismes communautaires"
+    },
+    {
+        "id": 1,
+        "fonction": "Sécurité de nos quartiers (mesures d'atténuation de la vitesse)"
+    },
+    {
+        "id": 1,
+        "fonction": "Protection de la forêt Boucher et des espaces verts"
+    },
+    {
+        "id": 1,
+        "fonction": "Soutien aux infrastructures culturelles existantes et aux nouveaux projets"
+    },
+    {
+        "id": 1,
+        "fonction": "Revitalisation du centre-ville"
+    },
+    {
+        "id": 1,
+        "fonction": "Amélioration du réseau cyclable utilitaire et récréatif"
+    },
+    {
+        "id": 1,
+        "fonction": "Amélioration du transport en commun"
+    },
+    {
+        "id": 2,
+        "fonction": "Assurer le remplacement des équipements dans différents parcs ainsi que leur installation dans les nouveaux secteurs"
+    },
+    {
+        "id": 2,
+        "fonction": "Réduire la vitesse sur les artères principales ainsi que dans les zones résidentielles"
+    },
+    {
+        "id": 2,
+        "fonction": "Augmenter la surveillance dans les parcs afin de minimiser l'impact sur les résidences avoisinantes"
+    },
+    {
+        "id": 2,
+        "fonction": "Assurer la protection de la forêt Boucher et en faire un projet communautaire"
+    },
+    {
+        "id": 2,
+        "fonction": "Augmenter la présence policière dans le secteur d'Aylmer"
+    },
+    {
+        "id": 2,
+        "fonction": "Assurer l'agrandissement du centre Ernest-Lattion (centre pour aînés)"
+    },
+    {
+        "id": 2,
+        "fonction": "Créer un parc pour animaux de compagnie pour permettre aux propriétaires de les promener et de les laisser courir"
+    },
+    {
+        "id": 2,
+        "fonction": "Appuyer les démarches des amateurs de curling pour l'obtention de nouvelles installations"
+    },
+    {
+        "id": 2,
+        "fonction": "Investir davantage dans nos pistes cyclables"
+    },
+    {
+        "id": 3,
+        "fonction": "La sécurité des citoyens"
+    },
+    {
+        "id": 3,
+        "fonction": "Les infrastructures"
+    },
+    {
+        "id": 3,
+        "fonction": "L'environnement"
+    },
+    {
+        "id": 3,
+        "fonction": "Préserver l'identité spécifique"
+    },
+    {
+        "id": 4,
+        "fonction": "Agrandissement du centre communautaire - Plateau"
+    },
+    {
+        "id": 4,
+        "fonction": "Piste cyclable entre le boulevard du Plateau et de la rue de l'Atmosphère - Plateau"
+    },
+    {
+        "id": 4,
+        "fonction": "Piste BMX - Plateau"
+    },
+    {
+        "id": 4,
+        "fonction": "Projet pilote écoénergétique pour l'éclairage de rue - Manoir des Trembles"
+    },
+    {
+        "id": 4,
+        "fonction": "Revitaliser le centre communautaire - Manoir des Trembles"
+    },
+    {
+        "id": 4,
+        "fonction": "Terrain de planches à roulettes - Manoir des Trembles"
+    },
+    {
+        "id": 4,
+        "fonction": "Protection de la pinède - Jardins du Château"
+    },
+    {
+        "id": 4,
+        "fonction": "Gestion du réseau d'aqueduc et d'égouts - Jardins du Château"
+    },
+    {
+        "id": 4,
+        "fonction": "Éclairage et bollards sur le chemin de Lucerne - Place Champlain "
+    },
+    {
+        "id": 4,
+        "fonction": "Sécurité à l'angle des boulevards Alexandre-Taché et Saint-Raymond (marquage) - Place Champlain "
+    },
+    {
+        "id": 5,
+        "fonction": "Créer une maison de quartier"
+    },
+    {
+        "id": 5,
+        "fonction": "Construire un deuxième jeu d'eau"
+    },
+    {
+        "id": 5,
+        "fonction": "Ouvrir une piste de glisse sur la rue Gamelin"
+    },
+    {
+        "id": 5,
+        "fonction": "Sécuriser les passages pour piétons du boulevard des Allumettières"
+    },
+    {
+        "id": 5,
+        "fonction": "Continuer à travailler à la revitalisation du boulevard Saint-Joseph"
+    },
+    {
+        "id": 5,
+        "fonction": "Réaménager les rues Saint-Jean-Bosco et Bédard"
+    },
+    {
+        "id": 5,
+        "fonction": "Aménager un trottoir sur la rue Gamelin (secteur des Fées)"
+    },
+    {
+        "id": 5,
+        "fonction": "Prévoir des mesures d'atténuation de vitesse (rues Isabelle et Fréchette)"
+    },
+    {
+        "id": 5,
+        "fonction": "Doubler le budget de réfection des trottoirs"
+    },
+    {
+        "id": 5,
+        "fonction": "Étendre le projet de recyclage sur rue"
+    },
+    {
+        "id": 5,
+        "fonction": "Clôturer le parc des Lutins"
+    },
+    {
+        "id": 5,
+        "fonction": "Continuer à planter et à distribuer des arbres"
+    },
+    {
+        "id": 5,
+        "fonction": "Continuer à organiser des corvées citoyennes"
+    },
+    {
+        "id": 5,
+        "fonction": "Améliorer le réseau cyclable et piétonnier"
+    },
+    {
+        "id": 5,
+        "fonction": "Implanter un programme de compostage"
+    },
+    {
+        "id": 5,
+        "fonction": "Travailler à la revitalisation du centre-ville"
+    },
+    {
+        "id": 5,
+        "fonction": "Compléter le Rapibus et continuer à développer le transport en commun"
+    },
+    {
+        "id": 5,
+        "fonction": "Prévoir une nouvelle bibliothèque municipale moderne dans le secteur de Hull"
+    },
+    {
+        "id": 5,
+        "fonction": "Travailler à la réalisation de l'Espace Dallaire"
+    },
+    {
+        "id": 6,
+        "fonction": "Soutenir des initiatives qui visent à améliorer la qualité de vie des résidants du district de l'Orée-du-Parc, notamment en matière de transport,de routes, de sécurité, de disponibilité des équipements récréatifs et sportifs et d'environnement."
+    },
+    {
+        "id": 6,
+        "fonction": "Favoriser des consultations ouvertes et la circulation d'une information transparente à travers les initiatives telles l'instauration de moyens de communication réguliers avec les citoyens, la promotion de la collaboration entre les institutions de savoir et les partenaires des milieux sportifs et culturels."
+    },
+    {
+        "id": 6,
+        "fonction": "Contribuer à ce que les résidants du district de l'Orée-du-Parc, tout comme ceux de l'ensemble de la ville de Gatineau, soient fiers d'être Gatinois à travers les initiatives dont la réalisation renforcera le sentiment d'appartenance et la fierté d'être Gatinois."
+    },
+    {
+        "id": 7,
+        "fonction": "Contribuer à une gestion rigoureuse et transparente des finances publiques"
+    },
+    {
+        "id": 7,
+        "fonction": "Favoriser la mise en place d'une politique d'accessibilité aux personnes à mobilité réduite"
+    },
+    {
+        "id": 7,
+        "fonction": "Stimuler l'accès à un logement à prix abordable de qualité"
+    },
+    {
+        "id": 7,
+        "fonction": "Promouvoir la revitalisation des secteurs Daniel-Johnson et Mutchmore"
+    },
+    {
+        "id": 7,
+        "fonction": "Contribuer à l'amélioration du déneigement de nos rues et et de nos trottoirs ainsi qu'un meilleur entretien de nos parcs"
+    },
+    {
+        "id": 7,
+        "fonction": "Réévaluer la place du comité exécutif dans le processus décisionnel municipal"
+    },
+    {
+        "id": 7,
+        "fonction": "Poursuivre la campagne de réduction de la vitesse dans les quartiers en instaurant une escouade policière dédiée à la circulation"
+    },
+    {
+        "id": 8,
+        "fonction": "Mettre l'accent sur le transport actif et l'achat local (rendre permanent le projet-pilote BIXI)"
+    },
+    {
+        "id": 8,
+        "fonction": "Mettre en œuvre la proposition de l'Association des résidants des jardins Taché pour assurer la sécurité des piétons sur le boulevard Alexandre-Taché"
+    },
+    {
+        "id": 8,
+        "fonction": "Promouvoir le Grand Ménage du printemps et fleurir le cœur du centre-ville"
+    },
+    {
+        "id": 8,
+        "fonction": "Accentuer notre partenariat avec le milieu de l'éducation pour développer l'économie du savoir"
+    },
+    {
+        "id": 8,
+        "fonction": "Favoriser la mise en place d'une grande bibliothèque sur la rue Montcalm"
+    },
+    {
+        "id": 8,
+        "fonction": "Faire du centre Robert-Guertin une salle de spectacles tout en hébergeant le club de hockey Les Olympiques de Gatineau"
+    },
+    {
+        "id": 8,
+        "fonction": "Relancer le projet de l'Espace Dallaire"
+    },
+    {
+        "id": 8,
+        "fonction": "Continuer à reverdir le centre-ville et implanter des jardins communautaires"
+    },
+    {
+        "id": 8,
+        "fonction": "Travailler à la mise en place d'une épicerie communautaire"
+    },
+    {
+        "id": 8,
+        "fonction": "Rendre le prêt de livres de bibliothèque accessible aux résidences pour aînés"
+    },
+    {
+        "id": 9,
+        "fonction": "S'assurer que nos aqueducs et nos égouts sont en bon état pour desservir les citoyens adéquatement"
+    },
+    {
+        "id": 9,
+        "fonction": "Revitaliser nos parcs et nos espaces verts en plantant des arbres"
+    },
+    {
+        "id": 9,
+        "fonction": "Enrayer les courses d'autos sur la rue Saint-Louis, le chemin des Érables, le boulevard La Vérendrye, etc."
+    },
+    {
+        "id": 9,
+        "fonction": "Favoriser l'accès au transport en commun en aménageant un stationnement incitatif sur la rue Saint-Louis"
+    },
+    {
+        "id": 9,
+        "fonction": "Aménager des endroits sécuritaires pour les usagers du transport en commun le long des routes dangereuses"
+    },
+    {
+        "id": 9,
+        "fonction": "Entretenir, réparer et aménager les pistes cyclables"
+    },
+    {
+        "id": 10,
+        "fonction": "Améliorer la réparation des fissures dans les rues afin d'augmenter la durée de vie de nos routes"
+    },
+    {
+        "id": 10,
+        "fonction": "Planifier la réfection des rues"
+    },
+    {
+        "id": 10,
+        "fonction": "Promouvoir le développement du district et de ses activités communautaires"
+    },
+    {
+        "id": 10,
+        "fonction": "Promouvoir la sécurité routière en mettant en place un projet d'auto-patrouille communautaire"
+    },
+    {
+        "id": 10,
+        "fonction": "Poursuivre le projet de réaménagement des berges de nos cours d'eau dans le secteur de la rue Jacques-Cartier"
+    },
+    {
+        "id": 10,
+        "fonction": "Promouvoir un plus grand sentiment d'appartenance et de fierté"
+    },
+    {
+        "id": 10,
+        "fonction": "Travailler au développement des sentiers récréatifs et à l'embellissement du district"
+    },
+    {
+        "id": 11,
+        "fonction": "Continuer à communiquer rapidement avec les citoyens"
+    },
+    {
+        "id": 11,
+        "fonction": "Assurer la réfection plus rapide et efficace des rues du quartier"
+    },
+    {
+        "id": 11,
+        "fonction": "Revitaliser le boulevard Gréber et dynamiser le regroupement des commerçants"
+    },
+    {
+        "id": 11,
+        "fonction": "Entamer les travaux de revitalisation sur la rue Jacques-Cartier"
+    },
+    {
+        "id": 11,
+        "fonction": "Revitaliser le parc Pierre-Lafontaine"
+    },
+    {
+        "id": 11,
+        "fonction": "Favoriser un meilleur rayonnement de Gatineau"
+    },
+    {
+        "id": 11,
+        "fonction": "Améliorer les services offerts aux aînés"
+    },
+    {
+        "id": 11,
+        "fonction": "Sécuriser davantage le district"
+    },
+    {
+        "id": 11,
+        "fonction": "Obtenir le financement pour une surface synthétique à l'école polyvalente Le Carrefour"
+    },
+    {
+        "id": 11,
+        "fonction": "Obtenir un plan particulier d'urbanisme pour les artères Gréber, Saint-Louis et Jacques-Cartier"
+    },
+    {
+        "id": 12,
+        "fonction": "Développer le sentiment d'appartenance par le travail d'équipe"
+    },
+    {
+        "id": 12,
+        "fonction": "Améliorer la visibilité de la ville par nos plans d'action"
+    },
+    {
+        "id": 12,
+        "fonction": "Maintenir et améliorer nos infrastructures"
+    },
+    {
+        "id": 12,
+        "fonction": "Maintenir la sécurité des citoyens"
+    },
+    {
+        "id": 12,
+        "fonction": "Offrir aux citoyens des services de qualité"
+    },
+    {
+        "id": 13,
+        "fonction": "Avoir une gestion financière rigoureuse et transparente"
+    },
+    {
+        "id": 13,
+        "fonction": "Maintenir des services de qualité et accessibles selon la capacité de payer des citoyens"
+    },
+    {
+        "id": 13,
+        "fonction": "Accroître la sensibilisation des gens au problème de la vitesse"
+    },
+    {
+        "id": 13,
+        "fonction": "Construire des bassins de rétention pour éviter les refoulements d'égout"
+    },
+    {
+        "id": 13,
+        "fonction": "Augmenter la sécurité dans les espaces publics (parcs, sentiers pédestres, etc.)"
+    },
+    {
+        "id": 13,
+        "fonction": "Continuer à soutenir les organismes communautaires"
+    },
+    {
+        "id": 13,
+        "fonction": "Aménager et améliorer nos parcs"
+    },
+    {
+        "id": 13,
+        "fonction": "Poursuivre la réfection de plusieurs rues, bordures et trottoirs et la synchronisation des feux de circulation dans le district du Versant"
+    },
+    {
+        "id": 13,
+        "fonction": "Favoriser un environnement sain"
+    },
+    {
+        "id": 13,
+        "fonction": "Continuer à améliorer le transport en commun (STO et Rapibus)"
+    },
+    {
+        "id": 13,
+        "fonction": "Poursuivre les démarches entreprises pour le développement économique"
+    },
+    {
+        "id": 13,
+        "fonction": "Poursuivre les démarches afin d'obtenir de nouveaux édifices fédéraux près de la maison de la culture"
+    },
+    {
+        "id": 14,
+        "fonction": "Veiller sur la qualité des routes, des trottoirs et des parcs"
+    },
+    {
+        "id": 14,
+        "fonction": "Intersection piétonnière sécuritaire et réduction de la vitesse"
+    },
+    {
+        "id": 14,
+        "fonction": "Bureau de police communautaire sur le territoire du district de Bellevue"
+    },
+    {
+        "id": 14,
+        "fonction": "Augmenter le nombre de pistes cyclables et le raccordement aux sentiers existants"
+    },
+    {
+        "id": 14,
+        "fonction": "Ouverture d'un centre communautaire et organisation de fêtes"
+    },
+    {
+        "id": 14,
+        "fonction": "Aider à structurer des comités d'embellissement et de bienvenue"
+    },
+    {
+        "id": 14,
+        "fonction": "Incitatif pour les associations d'entraide à s'installer dans le district"
+    },
+    {
+        "id": 14,
+        "fonction": "Embellissement du district, jardins et compostage communautaires"
+    },
+    {
+        "id": 14,
+        "fonction": "Projet immobilier vert"
+    },
+    {
+        "id": 14,
+        "fonction": "Projet de recyclage gratuit pour les écoles du district"
+    },
+    {
+        "id": 15,
+        "fonction": "Assurer la continuité des projets en cours et favoriser l'harmonie au conseil municipal"
+    },
+    {
+        "id": 15,
+        "fonction": "Répondre aux besoins des citoyens et des citoyennes afin d'ajuster les objectifs en consultation avec la population"
+    },
+    {
+        "id": 15,
+        "fonction": "Soutenir et appuyer les organismes de nos aînés et de la population du district"
+    },
+    {
+        "id": 15,
+        "fonction": "Favoriser l'accessibilité aux programmes d'activités pour nos aînés"
+    },
+    {
+        "id": 15,
+        "fonction": "Promouvoir la sécurité du quartier (vitesse, conduite dangereuse, éclairage et surveillance des points stratégiques"
+    },
+    {
+        "id": 15,
+        "fonction": "Sensibiliser les citoyens et les citoyennes à une démarche environnementale"
+    },
+    {
+        "id": 15,
+        "fonction": "Réfection et asphaltage de plusieurs rues et trottoirs"
+    },
+    {
+        "id": 15,
+        "fonction": "Favoriser les organismes dans le but d'améliorer la vie de nos jeunes dans le quartier"
+    },
+    {
+        "id": 15,
+        "fonction": "Favoriser l'implantation de nouvelles entreprises et offrir un appui à celles déjà établies"
+    },
+    {
+        "id": 15,
+        "fonction": "Développer et améliorer les parcs, les espaces verts ainsi que le parc du Lac-Beauchamp favorisant les activités physiques et les activités familiales"
+    },
+    {
+        "id": 16,
+        "fonction": "Réfection du boulevard Lorrain et de la rue Notre-Dame"
+    },
+    {
+        "id": 16,
+        "fonction": "Prolongement du boulevard La Vérendrye, entre les boulevards Lorrain et Labrosse"
+    },
+    {
+        "id": 16,
+        "fonction": "Reconstruction du boulevard Saint-René, entre le pont Boyce et le chemin Dalton"
+    },
+    {
+        "id": 16,
+        "fonction": "Reconstruction de l'avenue du Cheval-Blanc, trottoir et piste cyclable et mesures d'atténuation de la vitesse"
+    },
+    {
+        "id": 16,
+        "fonction": "Mesures de réduction de la vitesse (dos-d'âne et balises)"
+    },
+    {
+        "id": 16,
+        "fonction": "Continuer à appuyer le projet du Rapibus"
+    },
+    {
+        "id": 16,
+        "fonction": "Continuer à travailler pour réaliser le projet de la Ferme Dalton (parc écologique) et la construction du réservoir d'eau potable"
+    },
+    {
+        "id": 16,
+        "fonction": "Construction du parc du Faubourg de la Blanche et du parc du projet résidentiel du boulevard Lorrain"
+    },
+    {
+        "id": 16,
+        "fonction": "Poursuivre la construction du parc fluvial de la rivière Blanche"
+    },
+    {
+        "id": 16,
+        "fonction": "Travailler à l'ouverture du pont du Rang VI"
+    },
+    {
+        "id": 16,
+        "fonction": "Construction du bassin de rétention du ruisseau Blanchette"
+    },
+    {
+        "id": 16,
+        "fonction": "Préserver le territoire agricole"
+    },
+    {
+        "id": 16,
+        "fonction": "Instauration du programme Prévol"
+    },
+    {
+        "id": 16,
+        "fonction": "Surveillance des parcs et brigade vélo-patrouille"
+    },
+    {
+        "id": 17,
+        "fonction": "Préparer l'avenir des jeunes par nos actions et les aider à le préparer"
+    },
+    {
+        "id": 17,
+        "fonction": "Prolonger la piste cyclable et son pont dans le secteur Havre Mitchell"
+    },
+    {
+        "id": 17,
+        "fonction": "Améliorer la sécurité à l'intersection de la route 148 et du boulevard de l'Aéroport"
+    },
+    {
+        "id": 17,
+        "fonction": "Améliorer les parcs de quartier et les parcs-écoles"
+    },
+    {
+        "id": 17,
+        "fonction": "Établir une maison de jeunes dans le secteur de Masson-Angers"
+    },
+    {
+        "id": 17,
+        "fonction": "Encourager les commerces de quartier"
+    },
+    {
+        "id": 17,
+        "fonction": "Poursuivre l'amélioration du service de transport en commun"
+    },
+    {
+        "id": 17,
+        "fonction": "Aménager une piste cyclable et ses approches près du nouveau pont Major"
+    },
+    {
+        "id": 17,
+        "fonction": "Améliorer la sécurité (élargissement de la route 315 près du barrage des chutes Rhéaume)"
+    },
+    {
+        "id": 17,
+        "fonction": "Assurer un meilleur contrôle de la vitesse dans les rues et éliminer les bruits excessifs dans tout le secteur. Assurer également le contrôle des moustiques et de l'herbe à poux."
+    },
+    {
+        "id": 17,
+        "fonction": "Aménager des jardins communautaires"
+    },
+    {
+        "id": 17,
+        "fonction": "Effectuer des travaux d'entretien et d'infrastructures"
+    },
+    {
+        "id": 17,
+        "fonction": "Fournir de l'eau potable à coût raisonnable (chemin du Quai, chemin du Fer-à-Cheval)"
+    },
+    {
+        "id": 17,
+        "fonction": "Appuyer la rénovation des vieux quartiers"
+    },
+    {
+        "id": 18,
+        "fonction": "Le logement : Tous connaissent des gens qui ont dû quitter le secteur de Buckingham, faute de logements. Il est urgent d'augmenter l'offre en logements de toutes gammes dans notre secteur."
+    },
+    {
+        "id": 18,
+        "fonction": "La rivière : Nous avons une des plus belles rivières urbaines au Québec. C'est le cœur de notre secteur. Il faut augmenter encore l'accès à ses rives et à la rivière elle-même."
+    },
+    {
+        "id": 18,
+        "fonction": "Les services de proximité : Pour améliorer notre qualité de vie, il faut que nous développions davantage ce qui fait notre richesse, c'est-à-dire la possibilité de vivre, de travailler, de magasiner et de se distraire dans notre secteur."
+    },
+    {
+        "id": 18,
+        "fonction": "La création d'un conseil de quartier : Le secteur de Buckingham appartient aux gens du secteur; ils doivent être informés de ce qui s'y passe et participer aux grandes décisions qui l'affectent."
+    },
+]
