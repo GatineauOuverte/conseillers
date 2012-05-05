@@ -1,0 +1,434 @@
+[
+    {
+        "id": 1,
+        "fonction": "Président de la Commission des arts, de la culture, des lettres et du patrimoine"
+    },
+    {
+        "id": 1,
+        "fonction": "Président et porte-parole du Comité de travail ad hoc concernant l'entretien hivernal des réseaux routiers et pédestres"
+    },
+    {
+        "id": 1,
+        "fonction": "Président du Comité de suivi de la Politique en matière de diversité culturelle"
+    },
+    {
+        "id": 1,
+        "fonction": "Membre de Développement économique – CLD Gatineau"
+    },
+    {
+        "id": 1,
+        "fonction": "Membre de l'Interclubs Aylmer"
+    },
+    {
+        "id": 1,
+        "fonction": "Membre du réseau Les Arts et la Ville"
+    },
+    {
+        "id": 1,
+        "fonction": "Membre de la Société de transport de l'Outaouais"
+    },
+    {
+        "id": 1,
+        "fonction": "Membre du Comité des fêtes et des festivals"
+    },
+    {
+        "id": 1,
+        "fonction": "Membre du Comité de candidature des Jeux de la francophonie canadienne de 2014"
+    },
+    {
+        "id": 2,
+        "fonction": "Président du Comité de vérification"
+    },
+    {
+        "id": 2,
+        "fonction": "Membre du Comité consultatif agricole"
+    },
+    {
+        "id": 2,
+        "fonction": "Membre de la Commission des aînés et de la famille"
+    },
+    {
+        "id": 2,
+        "fonction": "Représentant de la Ville au sein de la Corporation de l'âge d'or d'Aylmer"
+    },
+    {
+        "id": 3,
+        "fonction": "Président de la Commission consultative sur l'environnement et le développement durable"
+    },
+    {
+        "id": 3,
+        "fonction": "Membre du comité exécutif"
+    },
+    {
+        "id": 3,
+        "fonction": "Membre de la Commission des arts, de la culture, des lettres et du patrimoine"
+    },
+    {
+        "id": 4,
+        "fonction": "Président de la Commission de la sécurité publique et de la circulation"
+    },
+    {
+        "id": 4,
+        "fonction": "Membre du Comité de la brigade scolaire"
+    },
+    {
+        "id": 4,
+        "fonction": "Membre du Comité d'immobilisations et du budget et Comité de travail du plan financier à long terme"
+    },
+    {
+        "id": 4,
+        "fonction": "Membre du Comité de vérification"
+    },
+    {
+        "id": 4,
+        "fonction": "Membre du conseil d'administration du Développement économique – CLD Gatineau"
+    },
+    {
+        "id": 4,
+        "fonction": "Délégué auprès de la Société locale d'investissement pour le développement de l'emploi de Gatineau"
+    },
+    {
+        "id": 5,
+        "fonction": "Président du conseil municipal"
+    },
+    {
+        "id": 5,
+        "fonction": "Président de la Société de transport de l'Outaouais"
+    },
+    {
+        "id": 5,
+        "fonction": "Membre du conseil d'administration de Tourisme Outaouais"
+    },
+    {
+        "id": 5,
+        "fonction": "Membre du Comité de travail ad hoc concernant l'entretien hivernal des réseaux routiers et pédestres"
+    },
+    {
+        "id": 6,
+        "fonction": "Membre de la Commission consultative sur l'environnement et le développement durable"
+    },
+    {
+        "id": 6,
+        "fonction": "Membre de la Commission des loisirs, des sports et du développement communautaire"
+    },
+    {
+        "id": 6,
+        "fonction": "Membre de la Société de transport de l'Outaouais"
+    },
+    {
+        "id": 6,
+        "fonction": "Membre du Réseau des femmes d'affaires et professionnelles de l'Outaouais"
+    },
+    {
+        "id": 6,
+        "fonction": "Membre de la Conférence régionale des élus de l'Outaouais"
+    },
+    {
+        "id": 6,
+        "fonction": "Membre du Comité des partenaires du carrefour d'intégration de l'Outaouais"
+    },
+    {
+        "id": 7,
+        "fonction": "Membre de la Commission des arts, de la culture, des lettres et du patrimoine"
+    },
+    {
+        "id": 8,
+        "fonction": "Présidente de la Commission Gatineau, Ville en santé"
+    },
+    {
+        "id": 8,
+        "fonction": "Vice-présidente du Comité consultatif d'urbanisme et Comité sur les demandes de démolition"
+    },
+    {
+        "id": 8,
+        "fonction": "Vice-présidente de la Conférence régionale des élus"
+    },
+    {
+        "id": 8,
+        "fonction": "Membre de Tourisme Outaouais"
+    },
+    {
+        "id": 8,
+        "fonction": "Membre de la Commission des aînés et de la famille"
+    },
+    {
+        "id": 8,
+        "fonction": "Membre de la Table de coordination des clubs de l'âge d'or du secteur de Hull"
+    },
+    {
+        "id": 8,
+        "fonction": "Membre de la Corporation du Centre Jules-Desbiens"
+    },
+    {
+        "id": 8,
+        "fonction": "Membre de la Société de développement du film et de la télévision d'Ottawa-Gatineau"
+    },
+    {
+        "id": 8,
+        "fonction": "Membre du Réseau des femmes d'affaires et professionnelles de l'Outaouais"
+    },
+    {
+        "id": 8,
+        "fonction": "Représentante de la Ville à la Fondation des aînés de l'Outaouais"
+    },
+    {
+        "id": 9,
+        "fonction": "Membre de la Commission consultative sur l'environnement et le développement durable"
+    },
+    {
+        "id": 9,
+        "fonction": "Membre de la Commission Gatineau, Ville en santé"
+    },
+    {
+        "id": 9,
+        "fonction": "Membre du Comité du bassin versant de la rivière Gatineau"
+    },
+    {
+        "id": 9,
+        "fonction": "Membre du Réseau des femmes d'affaires et professionnelles de l'Outaouais"
+    },
+    {
+        "id": 9,
+        "fonction": "Membre du conseil d'administration de la Société de transport de l'Outaouais"
+    },
+    {
+        "id": 10,
+        "fonction": "Membre du comité exécutif"
+    },
+    {
+        "id": 10,
+        "fonction": "Membre du Comité de vérification"
+    },
+    {
+        "id": 10,
+        "fonction": "Membre des comités de retraite de la Ville de Gatineau pour les employés cols blancs, les employés cols bleus, les employés-cadres, les policiers et les pompiers"
+    },
+    {
+        "id": 10,
+        "fonction": "Membre du Comité de travail ad hoc concernant l'entretien hivernal des réseaux routiers et pédestres"
+    },
+    {
+        "id": 10,
+        "fonction": "Membre de la Corporation du Festival de montgolfières de Gatineau"
+    },
+    {
+        "id": 10,
+        "fonction": "Membre du conseil d'administration de Développement économique – CLD Gatineau"
+    },
+    {
+        "id": 10,
+        "fonction": "Membre du conseil d'administration de la Société locale d'investissement pour le développement de l'emploi de Gatineau"
+    },
+    {
+        "id": 11,
+        "fonction": "Président de la Commission des aînés et de la famille"
+    },
+    {
+        "id": 11,
+        "fonction": "Membre de la Commission Gatineau, Ville en santé"
+    },
+    {
+        "id": 11,
+        "fonction": "Membre de la Commission de la sécurité publique et de la circulation"
+    },
+    {
+        "id": 11,
+        "fonction": "Substitut du Comité du bassin versant de la rivière Gatineau"
+    },
+    {
+        "id": 11,
+        "fonction": "Représentant de la Table des aînés et retraités de l'Outaouais"
+    },
+    {
+        "id": 12,
+        "fonction": "Vice-présidente du conseil municipal"
+    },
+    {
+        "id": 12,
+        "fonction": "Présidente du comité consultatif d'urbanisme et du Comité sur les demandes de démolition"
+    },
+    {
+        "id": 12,
+        "fonction": "Membre de la Commission conjointe d'aménagement de l'Outaouais"
+    },
+    {
+        "id": 12,
+        "fonction": "Membre de la Commission permanente sur l'habitation"
+    },
+    {
+        "id": 12,
+        "fonction": "Membre de la Corporation de la Maison de la culture de Gatineau"
+    },
+    {
+        "id": 12,
+        "fonction": "Membre du Réseau des femmes d'affaires et professionnelles de l'Outaouais"
+    },
+    {
+        "id": 13,
+        "fonction": "Maire suppléant"
+    },
+    {
+        "id": 13,
+        "fonction": "Président de la Commission des loisirs, des sports et du développement communautaire"
+    },
+    {
+        "id": 13,
+        "fonction": "Membre de la Commission permanente sur l'habitation"
+    },
+    {
+        "id": 13,
+        "fonction": "Membre de la Conférence régionale des élus de l'Outaouais"
+    },
+    {
+        "id": 13,
+        "fonction": "Membre de la Corporation de la Maison de la culture de Gatineau"
+    },
+    {
+        "id": 13,
+        "fonction": "Membre de la Corporation du Festival de montgolfières de Gatineau"
+    },
+    {
+        "id": 13,
+        "fonction": "Membre de Loisir sport Outaouais"
+    },
+    {
+        "id": 13,
+        "fonction": "Membre du conseil d'administration des Jeux du Québec 2010"
+    },
+    {
+        "id": 13,
+        "fonction": "Membre du conseil d'administration de Développement du sport de Gatineau"
+    },
+    {
+        "id": 13,
+        "fonction": "Membre de la Conférence régionale des élus"
+    },
+    {
+        "id": 13,
+        "fonction": "Membre du Comité des fêtes et des festivals"
+    },
+    {
+        "id": 13,
+        "fonction": "Membre du Comité exécutif des Jeux du Québec 2010"
+    },
+    {
+        "id": 14,
+        "fonction": "Présidente de la Commission permanente sur l'habitation"
+    },
+    {
+        "id": 14,
+        "fonction": "Membre du comité consultatif agricole"
+    },
+    {
+        "id": 14,
+        "fonction": "Membre de la Commission jeunesse"
+    },
+    {
+        "id": 14,
+        "fonction": "Membre de Développement économique – CLD Gatineau"
+    },
+    {
+        "id": 14,
+        "fonction": "Membre de l'Office municipal d'habitation de Gatineau"
+    },
+    {
+        "id": 14,
+        "fonction": "Membre de la Table de concertation agroalimentaire de l'Outaouais"
+    },
+    {
+        "id": 14,
+        "fonction": "Membre du Réseau des femmes d'affaires et professionnelles de l'Outaouais"
+    },
+    {
+        "id": 14,
+        "fonction": "Membre du Regroupement des gens d'affaires"
+    },
+    {
+        "id": 15,
+        "fonction": "Membre de la Commission des loisirs, des sports et du développement communautaire"
+    },
+    {
+        "id": 15,
+        "fonction": "Membre du Comité d'immobilisations et du budget"
+    },
+    {
+        "id": 15,
+        "fonction": "Membre du Comité de travail du plan financier à long terme"
+    },
+    {
+        "id": 15,
+        "fonction": "Membre de la Commission jeunesse"
+    },
+    {
+        "id": 16,
+        "fonction": "Président du Comité consultatif agricole"
+    },
+    {
+        "id": 16,
+        "fonction": "Membre de la Corporation de l'aéroport exécutif de Gatineau-Ottawa"
+    },
+    {
+        "id": 16,
+        "fonction": "Membre du conseil d'administration de la Société de transport de l'Outaouais"
+    },
+    {
+        "id": 16,
+        "fonction": "Membre de la Table de concertation agroalimentaire de l'Outaouais"
+    },
+    {
+        "id": 17,
+        "fonction": "Président du Comité des immobilisations et du budget et du Comité de travail du plan financier à long terme"
+    },
+    {
+        "id": 17,
+        "fonction": "Vice-président du comité exécutif"
+    },
+    {
+        "id": 17,
+        "fonction": "Membre de la Commission sur la sécurité publique et de la circulation"
+    },
+    {
+        "id": 17,
+        "fonction": "Membre de Développement économique – CLD Gatineau"
+    },
+    {
+        "id": 17,
+        "fonction": "Membre du conseil d'administration de l'Association des centres locaux de développement du Québec"
+    },
+    {
+        "id": 17,
+        "fonction": "Délégué du Québec à la Fédération canadienne des municipalités"
+    },
+    {
+        "id": 17,
+        "fonction": "Substitut du Comité du bassin versant de la rivière du Lièvre"
+    },
+    {
+        "id": 18,
+        "fonction": "Président de la Commission jeunesse"
+    },
+    {
+        "id": 18,
+        "fonction": "Membre du Comité consultatif d'urbanisme et Comité sur les demandes de démolition"
+    },
+    {
+        "id": 18,
+        "fonction": "Membre du Comité de travail ad hoc concernant l'entretien hivernal des réseaux routiers et pédestres"
+    },
+    {
+        "id": 18,
+        "fonction": "Membre de la Commission conjointe d'aménagement de l'Outaouais"
+    },
+    {
+        "id": 18,
+        "fonction": "Membre de Buckingham en fête"
+    },
+    {
+        "id": 18,
+        "fonction": "Membre du Comité du bassin versant de la rivière du Lièvre"
+    },
+    {
+        "id": 18,
+        "fonction": "Membre du regroupement des gens d'affaires de la Basse-Lièvre"
+    },
+]
