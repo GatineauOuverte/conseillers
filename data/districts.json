@@ -1,92 +1,92 @@
 [
     {
         "district_id": 1,
-        "name": "District d'Aylmer"
+        "name": "District d'Aylmer",
         "short_name": "Aylmer"
     },
     {
         "district_id": 2,
-        "name": "District de Lucerne"
+        "name": "District de Lucerne",
         "short_name": "Lucerne"
     },
     {
         "district_id": 3,
-        "name": "District de Deschênes"
+        "name": "District de Deschênes",
         "short_name": "Deschênes"
     },
     {
         "district_id": 4,
-        "name": "District du Plateau-Manoir-des-Trembles"
+        "name": "District du Plateau-Manoir-des-Trembles",
         "short_name": "Plateau-Manoir-des-Trembles"
     },
     {
         "district_id": 5,
-        "name": "District de Wright-Parc-de-la-Montagne"
+        "name": "District de Wright-Parc-de-la-Montagne",
         "short_name": "Wright-Parc-de-la-Montagne"
     },
     {
         "district_id": 6,
-        "name": "District de l'Orée-du-Parc"
+        "name": "District de l'Orée-du-Parc",
         "short_name": "l'Orée-du-Parc"
     },
     {
         "district_id": 7,
-        "name": "District de Saint-Raymond-Vanier"
+        "name": "District de Saint-Raymond-Vanier",
         "short_name": "Saint-Raymond-Vanier"
     },
     {
         "district_id": 8,
-        "name": "District de Hull-Val-Tétreau"
+        "name": "District de Hull-Val-Tétreau",
         "short_name": "Hull-Val-Tétreau"
     },
     {
         "district_id": 9,
-        "name": "District de Limbour"
+        "name": "District de Limbour",
         "short_name": "Limbour"
     },
     {
         "district_id": 10,
-        "name": "District de Touraine"
+        "name": "District de Touraine",
         "short_name": "Touraine"
     },
     {
         "district_id": 11,
-        "name": "District de Pointe-Gatineau"
+        "name": "District de Pointe-Gatineau",
         "short_name": "Pointe-Gatineau"
     },
     {
         "district_id": 12,
-        "name": "District du Carrefour-de-l'Hôpital"
+        "name": "District du Carrefour-de-l'Hôpital",
         "short_name": "Carrefour-de-l'Hôpital"
     },
     {
         "district_id": 13,
-        "name": "District du Versant"
+        "name": "District du Versant",
         "short_name": "Versant"
     },
     {
         "district_id": 14,
-        "name": "District de Bellevue"
+        "name": "District de Bellevue",
         "short_name": "Bellevue"
     },
     {
         "district_id": 15,
-        "name": "District du Lac-Beauchamp"
+        "name": "District du Lac-Beauchamp",
         "short_name": "Lac-Beauchamp"
     },
     {
         "district_id": 16,
-        "name": "District de la Rivière-Blanche"
+        "name": "District de la Rivière-Blanche",
         "short_name": "Rivière-Blanche"
     },
     {
         "district_id": 17,
-        "name": "District de Masson-Angers"
+        "name": "District de Masson-Angers",
         "short_name": "Masson-Angers"
     },
     {
         "district_id": 18,
-        "name": "District de Buckingham"
+        "name": "District de Buckingham",
         "short_name": "Buckingham"
     }
 ]
