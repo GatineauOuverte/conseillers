@@ -30,7 +30,10 @@ foreach ($conseillers as $conseiller) {
         if (is_array($feedSet) && !empty($feedSet)) {
             //TODO choose the best one, not necessary the first one
             $links = array_keys($feedSet);
-            $feeds[] = $links[0];
+            $feeds[] = array(
+              'conseiller' => $conseiller->first_name . ' ' . $conseiller->last_name,
+              'link' => $links[0]
+            );
         }
     }
 }
@@ -38,21 +41,24 @@ foreach ($conseillers as $conseiller) {
 /**
  * Fetch blogs
  */
-foreach ($feeds as $link) {
+foreach ($feeds as $entry) {
+
   try {
-      $feed = Zend_Feed_Reader::import($link);
+      $feed = Zend_Feed_Reader::import($entry['link']);
   } catch (Exception $e) {
-      echo 'Error: Cannot read feed ' . $link . PHP_EOL;
+      echo 'Error: Cannot read feed ' . $entry['link'] . PHP_EOL;
       $feed = array();
   }
 
   foreach ($feed as $item) {
       $post = array();
+      $post['conseiller'] = $entry['conseiller'];
       $post['title'] = $item->getTitle();
       $post['content'] = $item->getContent();
       $post['url'] = $item->getLink();
       $post['posted_on'] = date('Y-m-d H:i:s', strtotime($item->getDateCreated()));
       $post['guid'] = $item->getId();
+      $post['source'] = 'website';
       $aggregate[] = $post;
   }
 }
@@ -63,6 +69,9 @@ foreach ($feeds as $link) {
 $timelineUrl = 'http://api.twitter.com/1/statuses/user_timeline/';
 $httpClient = new Zend_Http_Client();
 foreach ($conseillers as $conseiller) {
+    if (empty($conseiller->twitter)) {
+        continue;
+    }
     $httpClient->setUri($timelineUrl . trim($conseiller->twitter, '@') . '.json');
     $response = $httpClient->request();
     $content = Zend_Json::decode($response->getbody());
@@ -72,10 +81,12 @@ foreach ($conseillers as $conseiller) {
         //TODO enlever ce hack temporaire
         if (empty($tweet['text'])) { continue; }
         $post = array();
+        $post['conseiller'] = $conseiller->first_name . ' ' . $conseiller->last_name;
         $post['title'] = $conseiller->twitter;
         $post['content'] = $tweet['text'];
         $post['posted_on'] = date('Y-m-d H:i:s', strtotime($tweet['created_at']));
         $post['guid'] = (string) $tweet['id'];
+        $post['source'] = 'twitter';
         $aggregate[] = $post;
     }
 }
@@ -96,25 +107,31 @@ $googleNewsParams = array(
     'as_qdr' => 'a',
 );
 
+
 foreach ($conseillers as $conseiller) {
     try {
         $googleNewsParams['q'] = $conseiller->first_name . ' ' . $conseiller->last_name;
         $feedConseiller = $googleNewsUrl . http_build_query($googleNewsParams);
         $feed = Zend_Feed_Reader::import($feedConseiller);
-  } catch (Exception $e) {
-      echo 'Error: Cannot read feed for ' . $googleNewsParams['q'] . PHP_EOL;
-      $feed = array();
-  }
+    } catch (Exception $e) {
+        echo 'Error: Cannot read feed for ' . $googleNewsParams['q'] . PHP_EOL;
+        $feed = array();
+    }
 
-  foreach ($feed as $item) {
-      $post = array();
-      $post['title'] = $item->getTitle();
-      $post['content'] = $item->getContent();
-      $post['url'] = $item->getLink();
-      $post['posted_on'] = date('Y-m-d H:i:s', strtotime($item->getDateCreated()));
-      $post['guid'] = $item->getId();
-      $aggregate[] = $post;
-  }
+    foreach ($feed as $item) {
+        $sourceLink = parse_url($item->getLink());
+        parse_str($sourceLink['query'], $sourceQuery);
+        $source = $sourceQuery['url'];
+        $post = array();
+        $post['conseiller'] = $conseiller->first_name . ' ' . $conseiller->last_name;
+        $post['title'] = $item->getTitle();
+        $post['content'] = $item->getContent();
+        $post['url'] = $item->getLink();
+        $post['posted_on'] = date('Y-m-d H:i:s', strtotime($item->getDateCreated()));
+        $post['guid'] = $item->getId();
+        $post['source'] = $source;
+        $aggregate[] = $post;
+    }
 }
 
 file_put_contents('./aggregate.json', json_encode($aggregate));
