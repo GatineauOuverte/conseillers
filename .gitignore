@@ -6,4 +6,6 @@ nbproject/
 
 php/vendor
 php/aggregate.json
+php/fb.auth.php
 /nbproject/private/
+
