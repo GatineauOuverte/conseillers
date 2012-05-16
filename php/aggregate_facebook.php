@@ -25,7 +25,7 @@ $facebook = new FacebookGraph(
           FACEBOOK_APP_SECRET
         );
 
-$facebook->accessToken = '100219970040200|j44Egj2WibkJQOse2qngwpzulpw';
+$facebook->accessToken = FACEBOOK_ACCESS_TOKEN;
 
 //@TODO add error validation
 $conseillers = json_decode(file_get_contents(__DIR__ . '/../data/conseillers.json'));
@@ -60,8 +60,8 @@ foreach ($conseillers as $conseiller) {
     }
 }
 
-var_dump($aggregate);
 file_put_contents('./aggregate_facebook.json', json_encode($aggregate));
+
 
 
 /**
