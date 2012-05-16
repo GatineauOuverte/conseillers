@@ -1,0 +1,9 @@
+# IDE
+nbproject/
+
+# OS
+.DS_Store
+
+php/vendor
+php/aggregate.json
+/nbproject/private/
