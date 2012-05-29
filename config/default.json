@@ -1,0 +1,15 @@
+{
+  "server": {
+    "port": 8082
+  },
+  "view": {
+    "pretty": false
+  },
+  "mongodb": {
+      "user": ""
+    , "password": ""
+    , "server": "localhost"
+    , "database": "conseillers"
+    , "port": 27017
+  }
+}

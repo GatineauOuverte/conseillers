@@ -4,9 +4,17 @@ nbproject/
 # OS
 .DS_Store
 
+# Project specific
 php/vendor
 php/aggregate.json
 php/aggregate_facebook.json
 php/fb.auth.php
 /nbproject/private/
 
+# Node/Express
+node_modules/
+config/runtime.json
+config/development.json
+
+# Misc
+mongodb-2.0.5

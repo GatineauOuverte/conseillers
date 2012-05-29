@@ -1,0 +1,19 @@
+{
+    "name": "GO-conseillers"
+  , "description": "Mes Conseillers Municipaux à Gatineau"
+  , "author": "Gatineau Ouverte"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.8"
+    , "jade": ">= 0.0.1"
+    , "config": "0.4.13"
+    , "forever": "0.9.1"
+    , "mongoose": "2.6.5"
+  }
+  , "keywords": ["opendata", "gatineau"]
+  , "license": "MIT"
+  , "engine": {
+    "node": ">=0.6"
+  }
+}

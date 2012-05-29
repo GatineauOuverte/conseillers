@@ -1,0 +1,30 @@
+!!! 5
+html(lang="fr")
+  head
+    title Mes Conseillers
+    include ./includes/bootstrap
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container-fluid
+          a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href="#") Mes Conseillers
+          .nav-collapse
+            ul.nav
+              li.active <a href="#">Home</a>
+              li <a href="">About</a>
+              li <a href="">Contact</a>
+    .container-fluid
+      .row-fluid
+        != body
+      hr
+      footer
+        p.pull-right
+          a(href="#top") Back to top
+          p Server powered by <a href="http://nodejs.org/">Node.JS</a> and <a href="http://www.mongodb.org/">MongoDB</a>.
+          p Code licensed under the MIT License.
+

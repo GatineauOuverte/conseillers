@@ -1,0 +1,13 @@
+.span9
+  .hero-unit
+    h1 Mes Conseillers
+    p Un produit de Gatineau Ouverte
+  each entry in activities
+    .row-fluid
+      h2= entry.conseiller
+      p #{entry.title} !{entry.content}
+        .label.label-info #{entry.source} - #{entry.posted_on}
+.span3
+  .well
+    h1 Sidebar
+    p lorem ipsum

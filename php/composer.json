@@ -1,0 +1,21 @@
+{
+   "require": {
+        "php": ">=5.3.2",
+        "zendframework/feed": "2.0.*",
+        "zendframework/http": "2.0.*"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Go\\Tests": "tests/",
+            "Go": "src/"
+        }
+    },
+
+   "repositories": [
+      {
+        "type": "composer",
+        "url": "http://packages.zendframework.com/"
+      }
+    ]
+}
