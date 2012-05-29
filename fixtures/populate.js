@@ -1,6 +1,7 @@
 var   mongoose = require('mongoose')
     , config = require('config')
     , fs = require('fs')
+    , async = require('async')
     , Activity = require(__dirname + '/../models/activity')
 ;
 
@@ -12,21 +13,24 @@ mongoose.connection.on('error', function (err) {
 });
 if (config.mongodb.verbose) mongoose.set('debug', true);
 
-var file = fs.readFileSync(__dirname + '/activity.json', 'utf8');
-var aggregate = JSON.parse(file);
 
-console.log('importing ' + aggregate.length + ' items');
+var fixtureActivity = function(callback) {
+  var file = fs.readFileSync(__dirname + '/activity.json', 'utf8');
+  var aggregate = JSON.parse(file);
 
-for(var i=0; i<aggregate.length; i++) {
-  var act = new Activity(aggregate[i]);
-  act.save(callback);
-}
+  console.log('importing ' + aggregate.length + ' items');
 
-var callback =  function(err) {
+  for(var i=0; i<aggregate.length; i++) {
+    var act = new Activity(aggregate[i]);
+    act.save(callback);
+  }
+};
+
+async.series([fixtureActivity], function(err) {
   if (err) {
     console.dir(err);
   } else {
     console.log('Insertion complete');
   }
-  setTimeout(function() { mongoose.connection.close(); }, 1000);
-};
+  mongoose.connection.close();
+});

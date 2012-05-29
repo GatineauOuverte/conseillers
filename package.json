@@ -10,6 +10,7 @@
     , "config": "0.4.13"
     , "forever": "0.9.1"
     , "mongoose": "2.6.5"
+    , "async": "0.1.21"
   }
   , "keywords": ["opendata", "gatineau"]
   , "license": "MIT"
