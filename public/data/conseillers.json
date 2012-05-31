@@ -95,6 +95,7 @@
 		"email":"champagne.nicole@gatineau.ca",
 		"phone":"(819) 595-7110",
 		"web":"http://www.nicolechampagne.ca",
+		"feed": "http://www.nicolechampagne.ca:80/site/index.php?format=feed&type=atom",
 		"twitter":"",
 		"facebook":""
 	},
@@ -150,6 +151,7 @@
 		"email":"goneau.sylvie@gatineau.ca",
 		"phone":"(819) 595-7110",
 		"web":"http://www.sylviegoneau.ca",
+		"feed": "http://www.sylviegoneau.ca:80/index.php?format=feed&type=atom",
 		"twitter":"@sylvie_goneau",
 		"facebook":"http://www.facebook.com/profile.php?id=100001868724093"
 	},
@@ -194,6 +196,7 @@
 		"email":"pedneaud-jobin.maxime@gatineau.ca",
 		"phone":"(819) 595-7110",
 		"web":"http://www.maxpj.com",
+		"feed": "http://maxpj.com/feed/atom/",
 		"twitter":"@MPedneaudJobin",
 		"facebook":"http://www.facebook.com/pedneaudjobin"
 	}
