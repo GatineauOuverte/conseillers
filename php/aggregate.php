@@ -16,7 +16,7 @@ Zend_Loader_Autoloader::getInstance();
 $aggregate = array();
 
 //@TODO add error validation
-$conseillers = json_decode(file_get_contents(__DIR__ . '/../data/conseillers.json'));
+$conseillers = json_decode(file_get_contents(__DIR__ . '/../public/data/conseillers.json'));
 
 /**
  * Find feeds for each conseillers' website
