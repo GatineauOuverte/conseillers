@@ -18,26 +18,22 @@ var conseillers = require('./public/data/conseillers.json');
 
 //Atom Feeds
 var monitorFeed = function () {
-  function feedCallback (error, meta, articles){
+  function feedCallback (error, meta, articles, conseiller){
     if (error) console.error(error);
     else {
-      console.log('Feed info');
-      console.log('%s - %s - %s', meta.title, meta.link, meta.xmlUrl);
-      console.log('Articles');
       articles.forEach(function (article){
 
         var instance = new Activity();
-        instance.conseiller = '??';
-        instance.title = acticle.title;
+        instance.conseiller = conseiller.first_name + ' ' + conseiller.last_name;
+        instance.title = article.title;
         instance.guid = article.guid;
         instance.posted_on = article.pubdate;
-        instance.source = 'web';
-        instance.url = origLink;
-        // instance.save(function(err) {
-        //   if (err) { console.error(err); }
-        // });
-
-        console.log('%s - %s (%s)', article.date, article.title, article.link);
+        instance.source = meta.link;
+        instance.url = article.origlink || article.link;
+        instance.content = article.description;
+        instance.save(function(err) {
+          if (err) { console.error(err); }
+        });
       });
     }
   }
@@ -45,24 +41,37 @@ var monitorFeed = function () {
   //Website
   conseillers.forEach(function(conseiller) {
     if (conseiller.feed == undefined) { return; }
-    parser.parseUrl(conseiller.feed, feedCallback);
+
+    //anonymous, self executing function to keep 'conseiller' in scope
+    (function(conseiller){
+      parser.parseUrl(conseiller.feed, function(error, meta, articles) {
+        feedCallback(error, meta, articles, conseiller);
+      });
+    })(conseiller);
   });
 
-  //Google News
-  var googleNewsUrl = 'http://news.google.ca/news?';
-  var googleNewsParams = {
-      pz: 1
-    , output: 'atom'
-    , hl: 'fr'
-    , num: 100
-    , scoring: 'n'
-    , ned: 'fr_ca'
-    , as_drrb: 'q'
-    , as_qdr: 'a'
-    , q: "Maxime Pedneaud-Jobin"
-  };
-  var googleNewsParams = querystring.stringify(googleNewsParams);
-  parser.parseUrl(googleNewsUrl + googleNewsParams, feedCallback);
+  conseillers.forEach(function(conseiller) {
+    //Google News
+    var googleNewsUrl = 'http://news.google.ca/news?';
+    var googleNewsParams = {
+        pz: 1
+      , output: 'atom'
+      , hl: 'fr'
+      , num: 100
+      , scoring: 'n'
+      , ned: 'fr_ca'
+      , as_drrb: 'q'
+      , as_qdr: 'a'
+      , q: '"' + conseiller.first_name + ' ' + conseiller.last_name + '"'
+    };
+    var googleNewsParams = querystring.stringify(googleNewsParams);
+
+    (function(conseiller){
+      parser.parseUrl(googleNewsUrl + googleNewsParams, function(error, meta, articles) {
+        feedCallback(error, meta, articles, conseiller)
+      });
+    })(conseiller);
+  });
 };
 
 //Twitter Feeds
