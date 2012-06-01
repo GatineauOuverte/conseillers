@@ -1,10 +1,18 @@
 var querystring = require('querystring')
   , https = require('https')
   , config = require('config')
+  , mongoose = require('mongoose')
   , FeedParser = require('feedparser')
   , parser = new FeedParser()
+  , Activity = require('./models/activity');
   ;
 
+// configure mongodb
+mongoose.connect('mongodb://' + config.mongodb.user + ':' + config.mongodb.password + '@' + config.mongodb.server +':' + config.mongodb.port + '/' + config.mongodb.database);
+mongoose.connection.on('error', function (err) {
+  console.error('MongoDB error: ' + err.message);
+  console.error('Make sure a mongoDB server is running and accessible by this application')
+});
 
 var conseillers = require('./public/data/conseillers.json');
 
@@ -17,6 +25,18 @@ var monitorFeed = function () {
       console.log('%s - %s - %s', meta.title, meta.link, meta.xmlUrl);
       console.log('Articles');
       articles.forEach(function (article){
+
+        var instance = new Activity();
+        instance.conseiller = '??';
+        instance.title = acticle.title;
+        instance.guid = article.guid;
+        instance.posted_on = article.pubdate;
+        instance.source = 'web';
+        instance.url = origLink;
+        instance.save(function(err) {
+          if (err) { console.error(err); }
+        });
+
         console.log('%s - %s (%s)', article.date, article.title, article.link);
       });
     }
@@ -94,3 +114,5 @@ var monitorFacebook = function() {
 };
 
 //TODO move these function above in separate libraries
+
+monitorFacebook();
