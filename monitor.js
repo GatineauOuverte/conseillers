@@ -1,5 +1,5 @@
 var querystring = require('querystring')
-  , http = require('http')
+  , https = require('https')
   , FeedParser = require('feedparser')
   , parser = new FeedParser()
   ;
@@ -58,16 +58,15 @@ var monitorFeed = function () {
 //Twitter Feeds
 var monitorTwitter = function() {
   var options = {
-    host: 'api.twitter.com',
-    port: 80,
-    path: '/1/statuses/user_timeline/MPedneaudJobin.json'
+      host: 'api.twitter.com'
+    , path: '/1/statuses/user_timeline/MPedneaudJobin.json'
   };
-  http.get(options, function(res) {
+  https.get(options, function(res) {
     res.setEncoding('utf8');
     console.log("Got response: " + res.statusCode);
     var buff = '';
     res.on('data', function(chunk) {
-      buff += chunk;
+      buff += chunk.toString();
     });
     res.on('end', function() {
       var tweets = JSON.parse(buff);
