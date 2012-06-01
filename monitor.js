@@ -33,9 +33,9 @@ var monitorFeed = function () {
         instance.posted_on = article.pubdate;
         instance.source = 'web';
         instance.url = origLink;
-        instance.save(function(err) {
-          if (err) { console.error(err); }
-        });
+        // instance.save(function(err) {
+        //   if (err) { console.error(err); }
+        // });
 
         console.log('%s - %s (%s)', article.date, article.title, article.link);
       });
@@ -62,7 +62,7 @@ var monitorFeed = function () {
     , q: "Maxime Pedneaud-Jobin"
   };
   var googleNewsParams = querystring.stringify(googleNewsParams);
-  parser.parseUrl(googleNewsUrl + googleNewsParams, myCallback);
+  parser.parseUrl(googleNewsUrl + googleNewsParams, feedCallback);
 };
 
 //Twitter Feeds
@@ -115,4 +115,3 @@ var monitorFacebook = function() {
 
 //TODO move these function above in separate libraries
 
-monitorFacebook();
