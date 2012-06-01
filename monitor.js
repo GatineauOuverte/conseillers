@@ -4,17 +4,6 @@ var querystring = require('querystring')
   , parser = new FeedParser()
   ;
 
-function myCallback (error, meta, articles){
-  if (error) console.error(error);
-  else {
-    console.log('Feed info');
-    console.log('%s - %s - %s', meta.title, meta.link, meta.xmlUrl);
-    console.log('Articles');
-    articles.forEach(function (article){
-      console.log('%s - %s (%s)', article.date, article.title, article.link);
-    });
-  }
-}
 
 var conseillers = require('./public/data/conseillers.json');
 
