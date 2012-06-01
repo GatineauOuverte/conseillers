@@ -1,5 +1,6 @@
 var querystring = require('querystring')
   , https = require('https')
+  , config = require('config')
   , FeedParser = require('feedparser')
   , parser = new FeedParser()
   ;
@@ -70,7 +71,26 @@ var monitorTwitter = function() {
 
 //Facebook Feeds
 var monitorFacebook = function() {
-
+  var options = {
+      host: 'graph.facebook.com'
+    , path: '/pedneaudjobin/feed?access_token=' + config.facebook.access_token
+  };
+  https.get(options, function(res) {
+    res.setEncoding('utf8');
+    console.log("Got response: " + res.statusCode);
+    var buff = '';
+    res.on('data', function(chunk) {
+      buff += chunk.toString();
+    });
+    res.on('end', function() {
+      var posts = JSON.parse(buff);
+      posts.data.forEach(function(post){
+        console.log(post.message);
+      });
+    });
+  }).on('error', function(e) {
+    console.log("Got error: " + e.message);
+  });
 };
 
 //TODO move these function above in separate libraries

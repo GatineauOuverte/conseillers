@@ -11,5 +11,11 @@
     , "server": "localhost"
     , "database": "conseillers"
     , "port": 27017
+  },
+  "monitor": {
+    "interval": 60
+  },
+  "facebook": {
+    "access_token": ""
   }
 }
