@@ -12,4 +12,6 @@ var ActivitySchema = new Schema({
   , url         : String
 });
 
+ActivitySchema.index({ source: 1, guid: -1 }, {unique: true});
+
 module.exports = mongoose.model('Activity', ActivitySchema);

@@ -1,9 +1,10 @@
 var querystring = require('querystring')
+  , url = require('url')
   , https = require('https')
   , config = require('config')
   , mongoose = require('mongoose')
+  , async = require('async')
   , FeedParser = require('feedparser')
-  , parser = new FeedParser()
   , Activity = require('./models/activity');
   ;
 
@@ -18,21 +19,28 @@ var conseillers = require('./public/data/conseillers.json');
 
 //Atom Feeds
 var monitorFeed = function () {
+
   function feedCallback (error, meta, articles, conseiller){
     if (error) console.error(error);
     else {
       articles.forEach(function (article){
+
+        var source = url.parse(article.link, true);
+        if (source.hostname == 'news.google.com' || source.hostname == 'news.google.com') {
+          source = url.parse(source.query.url);
+        }
 
         var instance = new Activity();
         instance.conseiller = conseiller.first_name + ' ' + conseiller.last_name;
         instance.title = article.title;
         instance.guid = article.guid;
         instance.posted_on = article.pubdate;
-        instance.source = meta.link;
+        instance.source = source.hostname;
         instance.url = article.origlink || article.link;
         instance.content = article.description;
         instance.save(function(err) {
           if (err) { console.error(err); }
+          console.log(source.hostname + ' - ' + instance.title);
         });
       });
     }
@@ -40,18 +48,19 @@ var monitorFeed = function () {
 
   //Website
   conseillers.forEach(function(conseiller) {
-    if (conseiller.feed == undefined) { return; }
+    if (conseiller.feed == undefined || conseiller.feed == '') { return; }
 
     //anonymous, self executing function to keep 'conseiller' in scope
     (function(conseiller){
+      var parser = new FeedParser();
       parser.parseUrl(conseiller.feed, function(error, meta, articles) {
         feedCallback(error, meta, articles, conseiller);
       });
     })(conseiller);
   });
 
+  //Google News
   conseillers.forEach(function(conseiller) {
-    //Google News
     var googleNewsUrl = 'http://news.google.ca/news?';
     var googleNewsParams = {
         pz: 1
@@ -67,6 +76,7 @@ var monitorFeed = function () {
     var googleNewsParams = querystring.stringify(googleNewsParams);
 
     (function(conseiller){
+      var parser = new FeedParser();
       parser.parseUrl(googleNewsUrl + googleNewsParams, function(error, meta, articles) {
         feedCallback(error, meta, articles, conseiller)
       });
@@ -122,5 +132,16 @@ var monitorFacebook = function() {
   });
 };
 
-//TODO move these function above in separate libraries
+
+
+async.series([monitorFeed, monitorTwitter], function(err) {
+  if (err && err.code !== 11000) {
+    console.dir(err);
+  } else {
+    console.log('Update complete');
+  }
+  mongoose.connection.close();
+  process.exit();
+});
+
 
