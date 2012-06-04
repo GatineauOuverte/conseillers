@@ -5,9 +5,13 @@
   each entry in activities
     .row-fluid
       h2= entry.conseiller
-      p #{entry.title} !{entry.content}
-        .label.label-info #{entry.source} - #{entry.posted_on}
+      .label.label-info #{entry.source}
+      h4 #{entry.title}
+      div.well
+        !{entry.content}
+        p.label #{entry.posted_on}
+    hr
 .span3
-  .well
+  .well.sidebar
     h1 Sidebar
     p lorem ipsum
