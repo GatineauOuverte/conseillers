@@ -8,7 +8,8 @@
 		"phone":"(819) 595-7110",
 		"web":"http://www.stefanpsenak.ca",
 		"twitter":"@SPsenak",
-		"facebook":"http://www.facebook.com/profile.php?id=100000169292973"
+		"facebook":"http://www.facebook.com/profile.php?id=100000169292973",
+		"facebook_id": "100000169292973"
 	},
 	{
 		"conseiller_id":2,
@@ -19,7 +20,8 @@
 		"phone":"(819) 595-7110",
 		"web":"",
 		"twitter":"",
-		"facebook":""
+		"facebook":"",
+		"facebook_id": ""
 	},
 	{
 		"conseiller_id":3,
@@ -30,7 +32,8 @@
 		"phone":"(819) 595-7110",
 		"web":"",
 		"twitter":"@AlainRiel",
-		"facebook":"http://www.facebook.com/profile.php?id=205211089493636"
+		"facebook":"http://www.facebook.com/profile.php?id=205211089493636",
+		"facebook_id": "205211089493636"
 	},
 	{
 		"conseiller_id":4,
@@ -41,7 +44,8 @@
 		"phone":"(819) 595-7110",
 		"web":"http://www.maximetremblay.ca",
 		"twitter":"@tremblaymaxim",
-		"facebook":"http://www.facebook.com/maxime123a"
+		"facebook":"http://www.facebook.com/maxime123a",
+		"facebook_id": "170986029613945"
 	},
 	{
 		"conseiller_id":5,
@@ -52,7 +56,8 @@
 		"phone":"(819) 595-7110",
 		"web":"http://www.patricemartin.ca",
 		"twitter":"",
-		"facebook":"http://www.facebook.com/profile.php?id=100000934270940"
+		"facebook":"http://www.facebook.com/profile.php?id=100000934270940",
+		"facebook_id": "100000934270940"
 	},
 	{
 		"conseiller_id":6,
@@ -63,7 +68,8 @@
 		"phone":"(819) 595-7110",
 		"web":"http://www.mireilleapollon.com",
 		"twitter":"",
-		"facebook":"http://www.facebook.com/profile.php?id=100000159656924"
+		"facebook":"http://www.facebook.com/profile.php?id=100000159656924",
+		"facebook_id": "100000159656924"
 	},
 	{
 		"conseiller_id":7,
@@ -74,7 +80,8 @@
 		"phone":"(819) 595-7110",
 		"web":"",
 		"twitter":"",
-		"facebook":""
+		"facebook":"",
+		"facebook_id": ""
 	},
 	{
 		"conseiller_id":8,
@@ -85,7 +92,8 @@
 		"phone":"(819) 595-7110",
 		"web":"http://www.deniselaferriere.ca",
 		"twitter":"",
-		"facebook":"http://www.facebook.com/denise.laferriere"
+		"facebook":"http://www.facebook.com/denise.laferriere",
+		"facebook_id": "100000819541021"
 	},
 	{
 		"conseiller_id":9,
@@ -97,7 +105,8 @@
 		"web":"http://www.nicolechampagne.ca",
 		"feed": "http://www.nicolechampagne.ca:80/site/index.php?format=feed&type=atom",
 		"twitter":"",
-		"facebook":""
+		"facebook":"",
+		"facebook_id": ""
 	},
 	{
 		"conseiller_id":10,
@@ -108,7 +117,8 @@
 		"phone":"(819) 595-7110",
 		"web":"http://www.denistasse.com",
 		"twitter":"@DTasse",
-		"facebook":""
+		"facebook":"",
+		"facebook_id": ""
 	},
 	{
 		"conseiller_id":11,
@@ -119,7 +129,8 @@
 		"phone":"(819) 595-7110",
 		"web":"http://www.lucangers.ca",
 		"twitter":"@angersluc",
-		"facebook":"http://www.facebook.com/lucbangers"
+		"facebook":"http://www.facebook.com/lucbangers",
+		"facebook_id": "100001778228767"
 	},
 	{
 		"conseiller_id":12,
@@ -130,7 +141,8 @@
 		"phone":"(819) 595-7110",
 		"web":"http://www.patsybouthillette.com",
 		"twitter":"@patbouthillette",
-		"facebook":"http://www.facebook.com/profile.php?id=1053561611"
+		"facebook":"http://www.facebook.com/profile.php?id=1053561611",
+		"facebook_id": "1053561611"
 	},
 	{
 		"conseiller_id":13,
@@ -141,7 +153,8 @@
 		"phone":"(819) 595-7110",
 		"web":"http://josephdesylva.com",
 		"twitter":"",
-		"facebook":"http://www.facebook.com/joseph.desylva.5"
+		"facebook":"http://www.facebook.com/joseph.desylva.5",
+		"facebook_id": "100000348451126"
 	},
 	{
 		"conseiller_id":14,
@@ -153,7 +166,8 @@
 		"web":"http://www.sylviegoneau.ca",
 		"feed": "http://www.sylviegoneau.ca:80/index.php?format=feed&type=atom",
 		"twitter":"@sylvie_goneau",
-		"facebook":"http://www.facebook.com/profile.php?id=100001868724093"
+		"facebook":"http://www.facebook.com/profile.php?id=100001868724093",
+		"facebook_id": "100001868724093"
 	},
 	{
 		"conseiller_id":15,
@@ -164,7 +178,8 @@
 		"phone":"(819) 595-7110",
 		"web":"http://www.stephanelauzon.ca",
 		"twitter":"",
-	    "facebook":"http://www.facebook.com/profile.php?id=100000806381693"
+	  "facebook":"http://www.facebook.com/profile.php?id=100000806381693",
+		"facebook_id": "100000806381693"
 	},
 	{
 		"conseiller_id":16,
@@ -175,7 +190,8 @@
 		"phone":"(819) 595-7110",
 		"web":"",
 		"twitter":"",
-		"facebook":""
+		"facebook":"",
+		"facebook_id": ""
 	},
 	{
 		"conseiller_id":17,
@@ -186,7 +202,8 @@
 		"phone":"(819) 595-7110",
 		"web":"",
 		"twitter":"",
-		"facebook":""
+		"facebook":"",
+		"facebook_id": ""
 	},
 	{
 		"conseiller_id":18,
@@ -198,6 +215,7 @@
 		"web":"http://www.maxpj.com",
 		"feed": "http://maxpj.com/feed/atom/",
 		"twitter":"@MPedneaudJobin",
-		"facebook":"http://www.facebook.com/pedneaudjobin"
+		"facebook":"http://www.facebook.com/pedneaudjobin",
+		"facebook_id": "1661604104"
 	}
 ]

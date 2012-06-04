@@ -5,6 +5,7 @@ var querystring = require('querystring')
   , mongoose = require('mongoose')
   , async = require('async')
   , FeedParser = require('feedparser')
+  , bleach = require('bleach')
   , Activity = require('./models/activity');
   ;
 
@@ -37,7 +38,7 @@ var monitorFeed = function () {
         instance.posted_on = article.pubdate;
         instance.source = source.hostname;
         instance.url = article.origlink || article.link;
-        instance.content = article.description;
+        instance.content = bleach.sanitize(article.description);
         instance.save(function(err) {
           if (err) { console.error(err); }
           console.log(source.hostname + ' - ' + instance.title);
@@ -97,14 +98,14 @@ var monitorTwitter = function() {
       instance.guid = tweet.id_str;
       instance.posted_on = tweet.created_at;
       instance.source = 'twitter';
-      instance.url = 'https://twitter.com/ramsey/status/' + tweet.id_str;
-      instance.content = tweet.text;
+      instance.url = 'https://twitter.com/' + tweet.user.screen_name + '/status/' + tweet.id_str;
+      instance.content = bleach.sanitize(tweet.text);
       instance.save(function(err) {
         if (err) { console.error(err); }
         console.log(tweet.user.screen_name + ' - ' + tweet.text);
       });
 
-      console.log(conseiller.first_name + ' @' + tweet.user.screen_name + ': ' + tweet.text);
+      console.log(instance.title.first_name + ': ' + instance.content);
     });
   };
 
@@ -119,7 +120,6 @@ var monitorTwitter = function() {
     (function(conseiller){
       var req = https.get(options, function(res) {
         res.setEncoding('utf8');
-        console.log("Got response: " + res.statusCode);
         var buff = '';
         res.on('data', function(chunk) {
           buff += chunk.toString();
@@ -141,32 +141,60 @@ var monitorTwitter = function() {
 //Facebook Feeds
 var monitorFacebook = function() {
 
-  var options = {
-      host: 'graph.facebook.com'
-    , path: '/pedneaudjobin/feed?access_token=' + config.facebook.access_token
+  function savePosts(posts, conseiller) {
+    posts.forEach(function(post){
+      // only if it's a status update by this person, not post by random user on this users wall/timeline
+      if (post.from.id == conseiller.facebook_id && post.type == 'status') {
+        console.log(post);
+
+
+        var instance = new Activity();
+        instance.conseiller = conseiller.first_name + ' ' + conseiller.last_name;
+        instance.title = '';
+        instance.guid = post.id;
+        instance.posted_on = post.created_time;
+        instance.source = 'facebook';
+        instance.url = '';
+        instance.content = bleach.sanitize(post.message);
+        instance.save(function(err) {
+          if (err) { console.error(err); }
+          console.log(instance.conseiller + ' - ' + instance.content);
+        });
+      }
+    });
   };
-  https.get(options, function(res) {
-    res.setEncoding('utf8');
-    console.log("Got response: " + res.statusCode);
-    var buff = '';
-    res.on('data', function(chunk) {
-      buff += chunk.toString();
-    });
-    res.on('end', function() {
-      var posts = JSON.parse(buff);
-      posts.data.forEach(function(post){
-        console.log(post.message);
+
+  conseillers.forEach(function(conseiller) {
+    if (conseiller.facebook_id == undefined || conseiller.facebook_id == '') { return; }
+
+    var options = {
+        host: 'graph.facebook.com'
+      , path: '/' + conseiller.facebook_id + '/feed?access_token=' + config.facebook.access_token
+    };
+
+    (function(conseiller){
+      var req = https.get(options, function(res) {
+        res.setEncoding('utf8');
+        var buff = '';
+        res.on('data', function(chunk) {
+          buff += chunk.toString();
+        });
+        res.on('end', function() {
+          var posts = JSON.parse(buff);
+          savePosts(posts.data, conseiller);
+        });
       });
-    });
-  }).on('error', function(e) {
-    console.log("Got error: " + e.message);
+      req.on('error', function(e) {
+        console.log("Got error: " + e.message);
+      });
+    })(conseiller);
+
   });
+
 };
 
-
-
-async.series([monitorFeed, monitorTwitter], function(err) {
-  if (err && err.code !== 11000) {
+async.parallel([monitorFeed, monitorTwitter, monitorFacebook], function(err) {
+  if (err) {
     console.dir(err);
   } else {
     console.log('Update complete');
@@ -174,5 +202,4 @@ async.series([monitorFeed, monitorTwitter], function(err) {
   mongoose.connection.close();
   process.exit();
 });
-
 
