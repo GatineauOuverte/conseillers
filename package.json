@@ -1,7 +1,7 @@
 {
     "name": "GO-conseillers"
   , "description": "Mes Conseillers Municipaux à Gatineau"
-  , "version": "0.0.3"
+  , "version": "0.0.4"
   , "author": {
     "name": "Eric Leclerc",
     "email": "eric.leclerc@gmail.com"

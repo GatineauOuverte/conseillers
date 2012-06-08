@@ -1,3 +1,5 @@
+//FIXME this script hang because FeedParser stays open
+
 var querystring = require('querystring')
   , url = require('url')
   , https = require('https')
@@ -40,8 +42,15 @@ var monitorFeed = function () {
         instance.url = article.origlink || article.link;
         instance.content = bleach.sanitize(article.description);
         instance.save(function(err) {
-          if (err) { console.error(err); }
-          console.log(source.hostname + ' - ' + instance.title);
+          // We don't insert duplicate, so we expect errors 11000 to happen
+          if (err) {
+            if (err.code === 11000) {
+              console.log('Ignoring duplicate entry');
+            } else {
+              console.error(err);
+            }
+          }
+          console.log('Feed: ' + source.hostname + ' - ' + instance.title);
         });
       });
     }
@@ -53,7 +62,9 @@ var monitorFeed = function () {
 
     //anonymous, self executing function to keep 'conseiller' in scope
     (function(conseiller){
+      debugger;
       var parser = new FeedParser();
+      parser.on('end', function(n) { parser = null; });
       parser.parseUrl(conseiller.feed, function(error, meta, articles) {
         feedCallback(error, meta, articles, conseiller);
       });
@@ -101,8 +112,15 @@ var monitorTwitter = function() {
       instance.url = 'https://twitter.com/' + tweet.user.screen_name + '/status/' + tweet.id_str;
       instance.content = bleach.sanitize(tweet.text);
       instance.save(function(err) {
-        if (err) { console.error(err); }
-        console.log(tweet.user.screen_name + ' - ' + tweet.text);
+          // We don't insert duplicate, so we expect errors 11000 to happen
+          if (err) {
+            if (err.code === 11000) {
+              console.log('Ignoring duplicate entry');
+            } else {
+              console.error(err);
+            }
+          }
+          console.log('Twitter: ' +  tweet.user.screen_name + ' - ' + tweet.text);
       });
 
       console.log(instance.title.first_name + ': ' + instance.content);
@@ -145,9 +163,6 @@ var monitorFacebook = function() {
     posts.forEach(function(post){
       // only if it's a status update by this person, not post by random user on this users wall/timeline
       if (post.from.id == conseiller.facebook_id && post.type == 'status') {
-        console.log(post);
-
-
         var instance = new Activity();
         instance.conseiller = conseiller.first_name + ' ' + conseiller.last_name;
         instance.title = '';
@@ -157,8 +172,15 @@ var monitorFacebook = function() {
         instance.url = '';
         instance.content = bleach.sanitize(post.message);
         instance.save(function(err) {
-          if (err) { console.error(err); }
-          console.log(instance.conseiller + ' - ' + instance.content);
+          // We don't insert duplicate, so we expect errors 11000 to happe
+          if (err) {
+            if (err.code === 11000) {
+              console.log('Ignoring duplicate entry');
+            } else {
+              console.error(err);
+            }
+          }
+          console.log('Facebook: ' + instance.conseiller + ' - ' + instance.content);
         });
       }
     });
@@ -199,7 +221,9 @@ async.parallel([monitorFeed, monitorTwitter, monitorFacebook], function(err) {
   } else {
     console.log('Update complete');
   }
-  mongoose.connection.close();
-  process.exit();
+
+  setTimeout( function () {
+    mongoose.connection.close();
+  }, 1000);
 });
 
