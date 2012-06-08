@@ -2,8 +2,13 @@
 html(lang="fr")
   head
     title Mes Conseillers
-    include ./includes/bootstrap
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    block scripts
+      script(src='/javascripts/jquery-1.7.2.min.js')
+      script(src='/javascripts/bootstrap.min.js')
+    block stylesheets
+      link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+      link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min.css')
+      link(rel='stylesheet', href='/stylesheets/style.css')
   body
     .navbar.navbar-fixed-top
       .navbar-inner
@@ -20,11 +25,12 @@ html(lang="fr")
               li <a href="">Contact</a>
     .container-fluid
       .row-fluid
-        != body
+        block body
       hr
-      footer
-        p.pull-right
-          a(href="#top") Back to top
-          p Server powered by <a href="http://nodejs.org/">Node.JS</a> and <a href="http://www.mongodb.org/">MongoDB</a>.
-          p Code licensed under the MIT License.
+      block footer
+        footer
+          p.pull-right
+            a(href="#top") Back to top
+            p Server powered by <a href="http://nodejs.org/">Node.JS</a> and <a href="http://www.mongodb.org/">MongoDB</a>.
+            p Code licensed under the MIT License.
 

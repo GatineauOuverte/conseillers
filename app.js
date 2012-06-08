@@ -24,7 +24,10 @@ mongoose.connection.on('error', function (err) {
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  app.set('view options', { pretty: config.view.pretty });
+  app.set('view options', {
+      pretty: config.view.pretty
+    , layout: false
+  });
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
