@@ -1,5 +1,3 @@
-//FIXME this script hang because FeedParser stays open
-
 var querystring = require('querystring')
   , url = require('url')
   , https = require('https')
@@ -21,7 +19,7 @@ mongoose.connection.on('error', function (err) {
 var conseillers = require('./public/data/conseillers.json');
 
 //Atom Feeds
-var monitorFeed = function () {
+var monitorFeed = function (callback) {
 
   function feedCallback (error, meta, articles, conseiller){
     if (error) console.error(error);
@@ -56,49 +54,50 @@ var monitorFeed = function () {
     }
   }
 
+  var googleNewsUrl = 'http://news.google.ca/news?';
+  var googleNewsParams = {
+      pz: 1
+    , output: 'atom'
+    , hl: 'fr'
+    , num: 100
+    , scoring: 'n'
+    , ned: 'fr_ca'
+    , as_drrb: 'q'
+    , as_qdr: 'a'
+//    , q: '"' + conseiller.first_name + ' ' + conseiller.last_name + '"'
+  };
+
   //Website
-  conseillers.forEach(function(conseiller) {
-    if (conseiller.feed == undefined || conseiller.feed == '') { return; }
+  async.forEach(conseillers,
+    function(conseiller) {
+      if (conseiller.feed) {
+        //anonymous, self executing function to keep 'conseiller' in scope
+        (function(conseiller){
+          var parser = new FeedParser();
+          parser.on('end', function(n) { parser = null; });
+          parser.parseUrl(conseiller.feed, function(error, meta, articles) {
+            feedCallback(error, meta, articles, conseiller);
+          });
+        })(conseiller);
+      }
 
-    //anonymous, self executing function to keep 'conseiller' in scope
-    (function(conseiller){
-      debugger;
-      var parser = new FeedParser();
-      parser.on('end', function(n) { parser = null; });
-      parser.parseUrl(conseiller.feed, function(error, meta, articles) {
-        feedCallback(error, meta, articles, conseiller);
-      });
-    })(conseiller);
-  });
+      googleNewsParams.q = '"' + conseiller.first_name + ' ' + conseiller.last_name + '"';
+      var googleNewsParamsString = querystring.stringify(googleNewsParams);
 
-  //Google News
-  conseillers.forEach(function(conseiller) {
-    var googleNewsUrl = 'http://news.google.ca/news?';
-    var googleNewsParams = {
-        pz: 1
-      , output: 'atom'
-      , hl: 'fr'
-      , num: 100
-      , scoring: 'n'
-      , ned: 'fr_ca'
-      , as_drrb: 'q'
-      , as_qdr: 'a'
-      , q: '"' + conseiller.first_name + ' ' + conseiller.last_name + '"'
-    };
-    var googleNewsParams = querystring.stringify(googleNewsParams);
-
-    (function(conseiller){
-      var parser = new FeedParser();
-      parser.parseUrl(googleNewsUrl + googleNewsParams, function(error, meta, articles) {
-        feedCallback(error, meta, articles, conseiller)
-      });
-    })(conseiller);
-  });
+      (function(conseiller){
+        var parser = new FeedParser();
+        parser.parseUrl(googleNewsUrl + googleNewsParamsString, function(error, meta, articles) {
+          feedCallback(error, meta, articles, conseiller)
+        });
+      })(conseiller);
+    },
+    callback(null, 'feed')
+  );
 };
 
 
 //Twitter Feeds
-var monitorTwitter = function() {
+var monitorTwitter = function(callback) {
 
   function saveTweets(tweets, conseiller) {
     tweets.forEach(function(tweet){
@@ -127,37 +126,40 @@ var monitorTwitter = function() {
     });
   };
 
-  conseillers.forEach(function(conseiller) {
-    if (conseiller.twitter == undefined || conseiller.twitter == '') { return; }
+  async.forEach(conseillers,
+    function(conseiller) {
+      if (conseiller.twitter == undefined || conseiller.twitter == '') { return; }
 
-    var options = {
-        host: 'api.twitter.com'
-      , path: '/1/statuses/user_timeline/' + conseiller.twitter + '.json'
-    };
+      var options = {
+          host: 'api.twitter.com'
+        , path: '/1/statuses/user_timeline/' + conseiller.twitter + '.json'
+      };
 
-    (function(conseiller){
-      var req = https.get(options, function(res) {
-        res.setEncoding('utf8');
-        var buff = '';
-        res.on('data', function(chunk) {
-          buff += chunk.toString();
+      (function(conseiller){
+        var req = https.get(options, function(res) {
+          res.setEncoding('utf8');
+          var buff = '';
+          res.on('data', function(chunk) {
+            buff += chunk.toString();
+          });
+          res.on('end', function() {
+            var tweets = JSON.parse(buff);
+            saveTweets(tweets, conseiller);
+          });
         });
-        res.on('end', function() {
-          var tweets = JSON.parse(buff);
-          saveTweets(tweets, conseiller);
+        req.on('error', function(e) {
+          console.log("Got error: " + e.message);
         });
-      });
-      req.on('error', function(e) {
-        console.log("Got error: " + e.message);
-      });
-    })(conseiller);
+      })(conseiller);
 
-  });
+    },
+    callback(null, 'twitter')
+  );
 };
 
 
 //Facebook Feeds
-var monitorFacebook = function() {
+var monitorFacebook = function(callback) {
 
   function savePosts(posts, conseiller) {
     posts.forEach(function(post){
@@ -186,36 +188,39 @@ var monitorFacebook = function() {
     });
   };
 
-  conseillers.forEach(function(conseiller) {
-    if (conseiller.facebook_id == undefined || conseiller.facebook_id == '') { return; }
+  async.forEach(conseillers,
+    function(conseiller) {
+      if (conseiller.facebook_id == undefined || conseiller.facebook_id == '') { return; }
 
-    var options = {
-        host: 'graph.facebook.com'
-      , path: '/' + conseiller.facebook_id + '/feed?access_token=' + config.facebook.access_token
-    };
+      var options = {
+          host: 'graph.facebook.com'
+        , path: '/' + conseiller.facebook_id + '/feed?access_token=' + config.facebook.access_token
+      };
 
-    (function(conseiller){
-      var req = https.get(options, function(res) {
-        res.setEncoding('utf8');
-        var buff = '';
-        res.on('data', function(chunk) {
-          buff += chunk.toString();
+      (function(conseiller){
+        var req = https.get(options, function(res) {
+          res.setEncoding('utf8');
+          var buff = '';
+          res.on('data', function(chunk) {
+            buff += chunk.toString();
+          });
+          res.on('end', function() {
+            var posts = JSON.parse(buff);
+            savePosts(posts.data, conseiller);
+          });
         });
-        res.on('end', function() {
-          var posts = JSON.parse(buff);
-          savePosts(posts.data, conseiller);
+        req.on('error', function(e) {
+          console.log("Got error: " + e.message);
         });
-      });
-      req.on('error', function(e) {
-        console.log("Got error: " + e.message);
-      });
-    })(conseiller);
+      })(conseiller);
 
-  });
+    },
+    callback(null, 'facebook')
+  );
 
 };
 
-async.parallel([monitorFeed, monitorTwitter, monitorFacebook], function(err) {
+async.parallel([monitorFeed, monitorTwitter, monitorFacebook], function(err, results) {
   if (err) {
     console.dir(err);
   } else {
