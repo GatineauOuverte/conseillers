@@ -32,5 +32,8 @@ async.series([fixtureActivity], function(err) {
   } else {
     console.log('Insertion complete');
   }
-  mongoose.connection.close();
+
+  setTimeout( function () {
+    mongoose.connection.close();
+  }, 1000);
 });
